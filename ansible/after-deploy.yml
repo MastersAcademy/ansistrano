@@ -5,7 +5,7 @@
 - name: precompile
   become: true
   become_user: app
-  shell: bash -c "cd /home/app/ma/current/ansible && rake assets:precompile"
+  shell: bash -c "cd /home/app/ma/current && rake assets:precompile"
   register: ps
 - name: up project
   become: true
