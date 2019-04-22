@@ -2,6 +2,11 @@
   become: true
   become_user: app
   shell: bash -c "cp /home/app/.env /home/app/ma/current/.env"
+- name: precompile
+  become: true
+  become_user: app
+  shell: bash -c "cd /home/app/ma/current/ansible && rake assets:precompile"
+  register: ps
 - name: up project
   become: true
   become_user: app
