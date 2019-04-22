@@ -30,7 +30,7 @@ services:
     command: sh -c 'cd /app/ma && sidekiq'
     depends_on:
       - redis
-      - rails
+      - db
     env_file:
       - .env
 volumes:
